@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Wallet — Secure Solana Wallet</title>
+    <meta name="description" content="Nexus Wallet is a fast, secure, non-custodial Solana wallet. Send, receive, swap SOL and SPL tokens with real-time prices.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0b1a;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 50%, rgba(15,140,255,0.1) 0%, transparent 50%);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 24px;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 60px rgba(124,58,237,0.3);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #3b82f6);
+            color: #fff;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(124,58,237,0.4); }
+        .btn-secondary {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+        .features {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .security {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(124,58,237,0.05);
+        }
+        .security h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .security p { color: #94a3b8; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        footer a { color: #94a3b8; text-decoration: none; margin: 0 1rem; }
+        footer a:hover { color: #fff; }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="logo.png" alt="Nexus Wallet" class="logo">
+        <h1>Nexus Wallet</h1>
+        <p class="subtitle">A fast, secure, non-custodial Solana wallet. Send, receive, and swap SOL and SPL tokens with real-time prices.</p>
+        <div class="buttons">
+            <a href="https://chrome.google.com/webstore" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/></svg>
+                Add to Chrome
+            </a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Nexus Wallet?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(124,58,237,0.15);">&#9889;</div>
+                <h3>Lightning Fast</h3>
+                <p>Send and receive SOL and SPL tokens instantly on the Solana blockchain with near-zero fees.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(20,241,149,0.15);">&#128274;</div>
+                <h3>Fully Secure</h3>
+                <p>Your private keys are encrypted and stored locally. No data is ever sent to external servers.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(59,130,246,0.15);">&#128257;</div>
+                <h3>Built-in Swap</h3>
+                <p>Swap thousands of tokens directly in your wallet powered by Jupiter DEX aggregator.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(244,63,94,0.15);">&#128200;</div>
+                <h3>Real-Time Prices</h3>
+                <p>Track token prices, 24h changes, and interactive charts right inside your wallet.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(245,158,11,0.15);">&#128101;</div>
+                <h3>Multiple Accounts</h3>
+                <p>Create and manage unlimited wallets. Switch between accounts with a single click.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(6,182,212,0.15);">&#127760;</div>
+                <h3>DApp Ready</h3>
+                <p>Connect to any Solana DApp seamlessly. Full Web3 provider support built in.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="security">
+        <h2>Your Keys, Your Crypto</h2>
+        <p>Nexus Wallet is a non-custodial wallet. Your private keys never leave your device. We use industry-standard encryption to keep your assets safe. Open source and transparent.</p>
+    </section>
+
+    <footer>
+        <p>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </p>
+        <p style="margin-top: 1rem;">&copy; 2026 Nexus Wallet. All rights reserved.</p>
+    </footer>
+</body>
+</html>
